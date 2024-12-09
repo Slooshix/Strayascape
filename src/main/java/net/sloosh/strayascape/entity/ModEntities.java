@@ -11,7 +11,7 @@ import net.sloosh.strayascape.entity.custom.EchidnaEntity;
 public class ModEntities {
     public static final EntityType<EchidnaEntity> ECHIDNA = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of("strayascape", "echidna"),
+            Identifier.of("Strayascape", "echidna"),
             EntityType.Builder.create(EchidnaEntity::new, SpawnGroup.CREATURE).dimensions(0.75f, 0.75f).build("cube")
     );
 }
