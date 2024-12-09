@@ -36,7 +36,7 @@
 					"pivot": [0, 0, 0]
 				},
 				{
-					"name": "bone",
+					"name": "body2",
 					"parent": "body",
 					"pivot": [0, 0, 0],
 					"cubes": [
@@ -88,17 +88,20 @@
 					]
 				},
 				{
-					"name": "bone3",
+					"name": "right2",
 					"parent": "quils",
 					"pivot": [1.5, 0, 3.75],
 					"cubes": [
-						{"origin": [-4, 4.75, 5.75], "size": [7, 3, 0], "pivot": [-1, 4.75, 6.75], "rotation": [-60, 0, -90], "uv": [13, 38]}
+						{"origin": [-4, 5.75, 5.75], "size": [7, 3, 0], "pivot": [-1, 5.75, 6.75], "rotation": [-60, 0, -90], "uv": [15, 38]}
 					]
 				},
 				{
-					"name": "bone4",
+					"name": "left3",
 					"parent": "quils",
-					"pivot": [0.75, 0, 2]
+					"pivot": [-1.5, 0, 3.75],
+					"cubes": [
+						{"origin": [-3, 5.75, 5.75], "size": [7, 3, 0], "pivot": [1, 5.75, 6.75], "rotation": [-60, 0, 90], "uv": [15, 38], "mirror": true}
+					]
 				},
 				{
 					"name": "legs",
