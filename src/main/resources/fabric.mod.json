@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "strayascape",
+	"version": "${version}",
+	"name": "Strayascape",
+	"description": "Immersing the Minecraft world into the land down under!",
+	"authors": [
+		"Sloosh"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/user/Sloosh",
+		"modrinth": "https://modrinth.com/project/strayascape",
+		"sources": "https://github.com/Slooshix/strayascape-fabric-1.21.1"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/strayascape/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sloosh.strayascape.Strayascape"
+		],
+		"fabric-datagen": [
+			"net.sloosh.strayascape.StrayascapeDataGenerator"
+		],
+		"client:": [
+			"net.sloosh.strayascape.StrayascapeClient"
+		]
+	},
+	"mixins": [
+		"strayascape.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"geckolib": "4.7"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
