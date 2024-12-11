@@ -2,7 +2,8 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.model.walk": {
-			"animation_length": 1.7917,
+			"loop": true,
+			"animation_length": 2,
 			"bones": {
 				"frontleft": {
 					"rotation": {
