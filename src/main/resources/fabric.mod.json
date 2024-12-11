@@ -12,7 +12,7 @@
 		"modrinth": "https://modrinth.com/project/strayascape",
 		"sources": "https://github.com/Slooshix/strayascape-fabric-1.21.1"
 	},
-	"license": "CC0-1.0",
+	"license": "All Rights Reserved",
 	"icon": "assets/strayascape/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -22,7 +22,7 @@
 		"fabric-datagen": [
 			"net.sloosh.strayascape.StrayascapeDataGenerator"
 		],
-		"client:": [
+		"client": [
 			"net.sloosh.strayascape.StrayascapeClient"
 		]
 	},
