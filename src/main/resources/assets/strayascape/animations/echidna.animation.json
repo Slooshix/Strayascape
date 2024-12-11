@@ -26,6 +26,27 @@
 					}
 				}
 			}
+		},
+		"animation.model.idle": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"legs": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
 		}
-	}
+	},
+	"geckolib_format_version": 2
 }

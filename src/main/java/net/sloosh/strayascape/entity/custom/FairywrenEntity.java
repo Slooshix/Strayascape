@@ -19,23 +19,23 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 
-public class EchidnaEntity extends AnimalEntity implements GeoEntity {
+public class FairywrenEntity extends AnimalEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     @Override
     public boolean isBreedingItem(ItemStack stack) {
         return false;
     }
 
-    public EchidnaEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+    public FairywrenEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return AnimalEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 16.0D)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 6.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f);
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6f);
 
 
     }
@@ -43,14 +43,13 @@ public class EchidnaEntity extends AnimalEntity implements GeoEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
-        this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.2f, 1));
+        this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.7f, 2));
         this.goalSelector.add(3, new LookAroundGoal(this));
     }
 
-
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.ECHIDNA.create(world);
+        return ModEntities.FAIRYWREN.create(world);
     }
 
     @Override
@@ -60,9 +59,9 @@ public class EchidnaEntity extends AnimalEntity implements GeoEntity {
 
     private PlayState predicate(AnimationState<GeoAnimatable> geoAnimatableAnimationState) {
         if (geoAnimatableAnimationState.isMoving()) {
-            geoAnimatableAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.echidna.walk", Animation.LoopType.LOOP));
+            geoAnimatableAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.fairywren.hop", Animation.LoopType.LOOP));
         }
-        geoAnimatableAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.echidna.idle",Animation.LoopType.LOOP));
+        geoAnimatableAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.fairywren.idle",Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
